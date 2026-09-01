@@ -23,7 +23,6 @@ Author: itdStatus. License: MIT.
 | Build | Vite 5 |
 | CSS | SCSS Modules (`*.module.scss`) |
 | QR engine | [`qr-code-styling`](https://github.com/kozakdenys/qr-code-styling) |
-| Package manager | npm (lockfile intentionally not committed — see `.gitignore`) |
 
 ## Development
 
