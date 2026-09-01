@@ -1,0 +1,25 @@
+@use '@/style/tokens' as *;
+
+.section {
+  background-color: $surface-color;
+  border-radius: $border-radius-big;
+  box-shadow: $shadow-section;
+  padding: 1.25rem;
+
+  & + & {
+    margin-top: 1rem;
+  }
+}
+
+.title {
+  font-size: .9375rem;
+  font-weight: 600;
+  color: $primary-text-color;
+  margin: 0 0 .75rem;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: .875rem;
+}

@@ -1,0 +1,35 @@
+@use 'sass:list';
+
+$primary-color: #3390ec;
+$primary-color-rgb: 51, 144, 236;
+$primary-color-dark: #2b7bc9;
+$light-primary-color: rgba(list.nth($primary-color-rgb, 1), list.nth($primary-color-rgb, 2), list.nth($primary-color-rgb, 3), .12);
+$danger-color: #df3f40;
+
+$surface-color: #ffffff;
+$background-color: #f4f4f5;
+$body-background-color: #ffffff;
+$border-color: #dfe1e5;
+$secondary-color: #c4c9cc;
+
+$primary-text-color: #000000;
+$secondary-text-color: #707579;
+$placeholder-color: #a8adb3;
+$link-color: #00488f;
+
+$border-radius-small: 8px;
+$border-radius-medium: 12px;
+$border-radius-big: 16px;
+$border-radius-round: 999px;
+
+$shadow-section: 0 1px 2px rgba(0, 0, 0, .04), 0 2px 12px rgba(0, 0, 0, .04);
+$shadow-panel: 0 4px 24px rgba(0, 0, 0, .06);
+$shadow-floating: 0 8px 32px rgba(0, 0, 0, .12);
+
+$font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Ubuntu, Arial, sans-serif;
+
+$transition-standard: .2s cubic-bezier(.4, 0, .2, 1);
+$hover-alpha: .08;
+
+$breakpoint-tablet: 960px;
+$breakpoint-mobile: 600px;

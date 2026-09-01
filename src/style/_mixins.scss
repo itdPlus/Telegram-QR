@@ -1,0 +1,37 @@
+@use 'sass:list';
+@use 'tokens' as *;
+
+@function primary-alpha($alpha) {
+  @return rgba(list.nth($primary-color-rgb, 1), list.nth($primary-color-rgb, 2), list.nth($primary-color-rgb, 3), $alpha);
+}
+
+@mixin hover-surface($color: rgba(0, 0, 0, $hover-alpha)) {
+  transition: background-color $transition-standard;
+
+  &:hover {
+    background-color: $color;
+  }
+}
+
+@mixin custom-scrollbar {
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $secondary-color;
+    border-radius: $border-radius-round;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+}
+
+@mixin focus-ring {
+  &:focus-visible {
+    outline: 2px solid $primary-color;
+    outline-offset: 2px;
+  }
+}

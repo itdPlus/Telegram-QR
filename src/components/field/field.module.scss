@@ -1,0 +1,108 @@
+@use '@/style/tokens' as *;
+@use '@/style/mixins' as *;
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: .375rem;
+}
+
+.label {
+  font-size: .8125rem;
+  font-weight: 500;
+  color: $secondary-text-color;
+}
+
+.control {
+  background-color: $background-color;
+  border: 1px solid transparent;
+  border-radius: $border-radius-medium;
+  padding: .625rem .75rem;
+  min-height: 44px;
+  width: 100%;
+  transition: border-color $transition-standard, background-color $transition-standard;
+
+  &::placeholder {
+    color: $placeholder-color;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: $primary-color;
+    background-color: $surface-color;
+  }
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 88px;
+  line-height: 1.45;
+}
+
+.select {
+  appearance: none;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23707579' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right .75rem center;
+  padding-right: 2.25rem;
+}
+
+.checkboxRow {
+  display: flex;
+  align-items: center;
+  gap: .625rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.checkbox {
+  width: 20px;
+  height: 20px;
+  border-radius: $border-radius-small;
+  border: 1.5px solid $secondary-color;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color $transition-standard, border-color $transition-standard;
+
+  svg {
+    width: 14px;
+    height: 14px;
+    color: #fff;
+    opacity: 0;
+    transition: opacity $transition-standard;
+  }
+}
+
+.checkboxInput {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.checkboxInput:checked + .checkbox {
+  background-color: $primary-color;
+  border-color: $primary-color;
+
+  svg {
+    opacity: 1;
+  }
+}
+
+.checkboxLabel {
+  font-size: .9375rem;
+  color: $primary-text-color;
+}
+
+.hint {
+  font-size: .75rem;
+  color: $placeholder-color;
+}
+
+.hintError {
+  color: $danger-color;
+}
