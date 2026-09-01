@@ -1,0 +1,52 @@
+@use '@/style/tokens' as *;
+
+.logoRow {
+  display: flex;
+  align-items: center;
+  gap: .875rem;
+}
+
+.logoPreview {
+  width: 44px;
+  height: 44px;
+  border-radius: $border-radius-medium;
+  background-color: $background-color;
+  box-shadow: inset 0 0 0 1px $border-color;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+.logoInfo {
+  display: flex;
+  flex-direction: column;
+  gap: .375rem;
+  min-width: 0;
+  flex: 1;
+}
+
+.logoFileName {
+  font-size: .8125rem;
+  color: $secondary-text-color;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.logoButtons {
+  display: flex;
+  gap: .5rem;
+}
+
+.logoError {
+  font-size: .8125rem;
+  color: $danger-color;
+}

@@ -1,0 +1,39 @@
+@use '@/style/tokens' as *;
+
+.tabsBar {
+  background-color: $surface-color;
+  border-bottom: 1px solid $border-color;
+}
+
+.tabsRow {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.layout {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 1.5rem 1.5rem 3rem;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 420px;
+  gap: 1.5rem;
+  align-items: start;
+
+  @media (max-width: $breakpoint-tablet) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.formColumn {
+  min-width: 0;
+}
+
+.previewColumn {
+  position: sticky;
+  top: 1.5rem;
+
+  @media (max-width: $breakpoint-tablet) {
+    position: static;
+  }
+}
